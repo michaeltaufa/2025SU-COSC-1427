@@ -15,7 +15,6 @@
  Date: 2025-07-12
 */
 
-
 public class Main{ 
   public static void main(String[] args){
 
@@ -36,8 +35,10 @@ public class Main{
     boolean isSeniorCitizen = true;
 
     // Strings are strings with double quotes
-    String name = "Michael";
-    String greeting = "Good Afternoon";
+    String username = "Michael";
+    String greeting = "Good Afternoon,";
+    String usernameGreeting = greeting + " " + username; 
+
 
 
     System.out.println("Hello World!");
@@ -47,9 +48,12 @@ public class Main{
 
 
     if (isSeniorCitizen){
+      System.out.println(usernameGreeting);
       System.out.println("Congratulations, you are eligible for Senior Citizen Discount.");
+      System.out.println("Your ticket will be " + USDcurrency + fruitPrice);
     }
     else{
+      System.out.println(usernameGreeting);
       System.out.println("Sorry, you are not eligible for Senior Citizen Discount.");
     }
   } 
