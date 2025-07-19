@@ -20,7 +20,7 @@ public class Dollars {
   public static void main(String[] args) {
 
 
-    Scanner inputDevice = new Scanner(System.in);
+    Scanner userInput = new Scanner(System.in);
     
   }
 }
