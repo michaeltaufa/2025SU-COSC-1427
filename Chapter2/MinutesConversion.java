@@ -20,6 +20,7 @@ public class MinutesConversion {
 
     int userInputMinutes;
 
+
     Scanner userInput = new Scanner(System.in);
     
     System.out.println("Welcome to the 'Minutes Conversion' Program.");
