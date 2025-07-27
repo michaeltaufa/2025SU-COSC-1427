@@ -33,9 +33,12 @@ public class InchConversion {
 
     incheConvert = userInput.nextDouble();
 
+    System.out.println("\nYou entered " + incheConvert + " inches.\n\nConversion Results:");
+
     // Output:
     InchFootYardConversion.convertYard(InchFootYardConversion.convertFeet(incheConvert));
-
+    
+    // Close the Scanner for good practice
     userInput.close();
   }
 
@@ -46,17 +49,14 @@ public class InchConversion {
     // Convert inches into feet:
     public static double convertFeet(double inches){
       double feet = inches/ 12.00;
-      System.out.println(inches + "in. has been converted to " + feet + " ft.");
+      System.out.printf("Feet conversion: %.2fft.\n", feet);
       return feet;
     }
     
     // Convert feet into yard
     public static void convertYard(double feet){
       double yards = feet / 3;
-      System.out.println(feet + "ft. has been converted to " + yards + " yd.");
+      System.out.printf("Yard conversion: %.2fft.\n", yards);
     }
   }
-
-
-
 }
