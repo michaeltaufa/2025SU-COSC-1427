@@ -29,6 +29,7 @@ public class FavoriteFruits {
 
     System.out.println(today);
     System.out.println("Welcome to the 'Favorite Fruits' program. Please enter your name: ");
+    System.out.println(today);
 
     username = userInput.nextLine();
     greetUser(username);
