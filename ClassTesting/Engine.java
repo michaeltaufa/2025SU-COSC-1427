@@ -24,12 +24,26 @@ public class Engine {
 
   // Methods:
   public void displayCylinders(){
-    System.out.println("The engine has " + cylinders + " cylinders and is a V" + cylinders);
+
+    if (cylinders == 0){
+      System.out.println("This engine is an electric vehicle that has no engine.");
+    }
+    else {
+      System.out.println("The engine has " + cylinders + " cylinders and is a V" + cylinders);
+    }
   }
 
   public void displaySizeEngine(){
-    System.out.println("The size of the engine is " + sizeOfEngine);
+    if (cylinders == 0){
+      System.out.println("This vehicle has no engine. Engine size is N/A.");
+    }
+    else {
+      System.out.println("The size of the engine is " + sizeOfEngine);
+    }
   }
+
+
+
 
  public static void main(String[] args) {
  } 
