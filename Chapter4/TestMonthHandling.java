@@ -24,46 +24,47 @@ public class TestMonthHandling {
   public static void main(String[] args) {
 
     int userMonth;
-    int userDate;
+    int userMonth2;
+    long userMonthAdd;
+
+    int userDay;
+    int userDay2;
+
     int userYear;
-
-    int userMonth1;
-    int userDate1;
-    int userYear1;
-
+    int userYear2;
 
     Scanner userInput = new Scanner(System.in);
 
+    System.out.println("Welcome to the 'Test Month Handling' Program.");
+
     System.out.println("Please enter the first month: ");
     userMonth = userInput.nextInt();
-
     System.out.println("Please enter the first date: ");
-    userDate = userInput.nextInt();
-
+    userDay = userInput.nextInt();
     System.out.println("Please enter the first year: ");
     userYear = userInput.nextInt();
 
-    LocalDate userDateFinal1 = LocalDate.of(userYear, userMonth, userDate);
-    System.out.println("First Date: " + userDateFinal1);
+    LocalDate userDateFinal1 = LocalDate.of(userYear, userMonth, userDay);
+    System.out.println("Here is the first date you entered: " + userDateFinal1);
 
-
+    System.out.println("Now enter a number of months to add to the date: ");
+    userMonthAdd = userInput.nextLong();
+    System.out.println(userDateFinal1.plusMonths(userMonthAdd));
 
 
     System.out.println("Please enter the second month: ");
-    userMonth1 = userInput.nextInt();
-
+    userMonth2 = userInput.nextInt();
     System.out.println("Please enter the second date: ");
-    userDate1 = userInput.nextInt();
-
+    userDay2 = userInput.nextInt();
     System.out.println("Please enter the second year: ");
-    userYear1 = userInput.nextInt();
+    userYear2 = userInput.nextInt();
 
-    LocalDate userDateFinal2 = LocalDate.of(userYear1, userMonth1, userDate1);
-    System.out.println("Second Date: " + userDateFinal2);
-    
+    LocalDate userDateFinal2 = LocalDate.of(userYear2, userMonth2, userDay2);
+    System.out.println("Here is the second date you entered: " + userDateFinal2);
 
-
-
+    System.out.println("Now enter a number of months to add to the second date: ");
+    userMonthAdd = userInput.nextLong();
+    System.out.println(userDateFinal2.plusMonths(userMonthAdd));
 
     userInput.close();
   }
