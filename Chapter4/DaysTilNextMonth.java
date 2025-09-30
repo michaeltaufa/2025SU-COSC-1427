@@ -46,6 +46,5 @@ public class DaysTilNextMonth {
 
 
     userInput.close();
-    System.out.println("Program closed.");
   }
 }
