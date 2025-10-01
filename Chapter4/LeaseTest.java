@@ -38,6 +38,11 @@ public class LeaseTest {
     System.out.println("Type for the following, Yes (y) or No (n)\nDo you own a pet: ");
     ownPetAnswer = userInput.nextLine();
 
+    if (ownPetAnswer.equals("y")){
+      testLease.addPetFee();
+      testLease.changeMonthlyRent(monthRent)
+    }
+
     System.out.println("How many months do you want to rent: ");
     userLeaseTerm = userInput.nextInt();
     testLease.changeLeaseTerm(userLeaseTerm);
@@ -49,11 +54,6 @@ public class LeaseTest {
     System.out.println("How much would your monthly rent cost: ");
     userMonthRent = userInput.nextDouble();
     testLease.changeMonthlyRent(userMonthRent);
-
-    if (ownPetAnswer.equals("y")){
-      testLease.addPetFee();
-    }
-
     testLease.changeTotalRent(userMonthRent);
 
 

@@ -54,11 +54,11 @@ public class Lease {
   }
 
   public void displayMonthlyRent(){
-    System.out.printf("Monthly Rent: $%.2f", monthlyRent);
+    System.out.printf("\nMonthly Rent: $%.2f", monthlyRent);
   }
 
   public void displayTotalRent(){
-    System.out.printf("Total Rent: $%.2f", totalRentCost);
+    System.out.printf("\nTotal Rent: $%.2f", totalRentCost);
   }
 
   public void displayLeaseTerm (){
@@ -70,49 +70,51 @@ public class Lease {
   }
 
 
-  public double addPetFee(){
-    if (havePet == true){
-      totalRentCost = monthlyRent + 10.00;
-      displayPetPolicy();
-    }
-    return totalRentCost;
-  } 
-
-
-
-  // Method (User input information):
-    // These methods will require user input to change the values for the
-    // attributes that is established in the constructor.
-
-  public String changeTenantFirstName(String firstName){
+  // 'Set' Methods:
+  // These methods will set and overwrite values from the default values
+  // of the class, Lease
+  
+  public String setTennantFirstName(String firstName){
     tenantfirstName = firstName;
     return tenantfirstName;
   }
 
-  public String changeTenantLastName(String lastName){
+  public String setTennantLastName(String lastName){
     tenantLastName = lastName;
     return tenantLastName;
   }
 
-  public int changeApartmentNumber(int unitNumber){
-    apartmentNumber = unitNumber;
-    return unitNumber;
+  public String setTennantFullName(String firstName, String lastName){
+    String tenantFullName = firstName + " " + lastName;
+    return tenantFullName;
   }
 
-  public double changeMonthlyRent(double monthRent){
-    monthlyRent = monthRent;
+  public int setApartmentNumber(int unitNumber){
+    apartmentNumber = unitNumber;
+    return apartmentNumber;
+  }
+
+  public int setLeaseTerm(int leaseMonths){
+    leaseTerm = leaseMonths;
+    return leaseTerm;
+  }
+
+
+  // WORK HERE -----------------------------------
+  public double setMonthlyRent(double monthlyRentCost){
+    monthlyRent = monthlyRentCost;
     return monthlyRent;
   }
 
-  public double changeTotalRent(double totalRent){
-    totalRentCost = totalRent;
-    return totalRentCost;
-  }
 
-  public int changeLeaseTerm(int leaseMonths){
-    leaseTerm = leaseMonths;
-    return leaseTerm;
-  } 
+
+
+
+
+
+
+
+
 
   public static void main(String[] args) {
   }
