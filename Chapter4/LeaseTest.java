@@ -15,55 +15,71 @@ public class LeaseTest {
 
     String userFirstName;
     String userLastName;
-    String ownPetAnswer;
 
     int userApartmentNumber;
     int userLeaseTerm;
 
     double userMonthRent;
 
+    String userPetInput;
+    boolean havePet;
+
     Scanner userInput = new Scanner(System.in);
     Lease testLease = new Lease("Michael", "Smith", 1000, 500.00, 5);
+
 
     System.out.println("Welcome to the 'LeaseTest' program.");
 
     System.out.println("Enter your first name: ");
     userFirstName = userInput.nextLine();
-    testLease.changeTenantFirstName(userFirstName);
+    testLease.setTennantFirstName(userFirstName);
+
 
     System.out.println("Enter your last name: ");
     userLastName = userInput.nextLine();
-    testLease.changeTenantLastName(userLastName);
+    testLease.setTennantLastName(userLastName);
 
-    System.out.println("Type for the following, Yes (y) or No (n)\nDo you own a pet: ");
-    ownPetAnswer = userInput.nextLine();
-
-    if (ownPetAnswer.equals("y")){
-      testLease.addPetFee();
-      testLease.changeMonthlyRent(monthRent)
-    }
 
     System.out.println("How many months do you want to rent: ");
     userLeaseTerm = userInput.nextInt();
-    testLease.changeLeaseTerm(userLeaseTerm);
+    testLease.setLeaseTerm(userLeaseTerm);
 
-    System.out.println("Enter the apartment number: "); 
+
+    System.out.println("Enter your desired apartment number: "); 
     userApartmentNumber = userInput.nextInt();
-    testLease.changeApartmentNumber(userApartmentNumber);
+    testLease.setApartmentNumber(userApartmentNumber);
+
 
     System.out.println("How much would your monthly rent cost: ");
     userMonthRent = userInput.nextDouble();
-    testLease.changeMonthlyRent(userMonthRent);
-    testLease.changeTotalRent(userMonthRent);
+    testLease.setMonthlyRent(userMonthRent);
+    userInput.nextLine();
 
 
+    System.out.println("Do you have a pet?\nType the following - Yes(y) or No(n): ");
+    userPetInput = userInput.nextLine();
+
+    if (userPetInput.equals("y")){
+      havePet = true;
+      testLease.setTotalCosts(havePet);
+      testLease.displayPetPolicy();
+    }
+    else if (userPetInput.equals("n")){
+      havePet = false;
+      testLease.setTotalCosts(havePet);
+    }
+
+
+
+    System.out.println("\nResults:");
     testLease.displayFullTenantName();
-    testLease.displayTotalRent();
-    testLease.displayMonthlyRent();
     testLease.displayApartmentNumber();
     testLease.displayLeaseTerm();
+    testLease.displayMonthlyRent();
+    testLease.displayTotalCost();
 
 
     userInput.close();
+    System.out.println("\nProgram is closed.");
   }
 }

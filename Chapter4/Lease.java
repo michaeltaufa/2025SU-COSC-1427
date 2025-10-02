@@ -29,10 +29,9 @@ public class Lease {
   private int apartmentNumber;
 
   private double monthlyRent;
-  private double totalRentCost;
   private int leaseTerm;
 
-  private boolean havePet;
+  private double totalCost;
 
   // Constructor:
   public Lease (String tenantfirstName, String tenantLastName, int apartmentNumber, double monthlyRent, int leaseTerm){
@@ -45,7 +44,7 @@ public class Lease {
 
   // Method (Display Information):
   public void displayFullTenantName(){
-    String tenantFullName = tenantfirstName + " " + tenantLastName;
+    String tenantFullName = "Tenant Full Name: " + tenantfirstName + " " + tenantLastName;
     System.out.println(tenantFullName);
   }
 
@@ -57,8 +56,8 @@ public class Lease {
     System.out.printf("\nMonthly Rent: $%.2f", monthlyRent);
   }
 
-  public void displayTotalRent(){
-    System.out.printf("\nTotal Rent: $%.2f", totalRentCost);
+  public void displayTotalCost(){
+    System.out.printf("\nTotal Cost: $%.2f", totalCost);
   }
 
   public void displayLeaseTerm (){
@@ -71,8 +70,8 @@ public class Lease {
 
 
   // 'Set' Methods:
-  // These methods will set and overwrite values from the default values
-  // of the class, Lease
+    // These methods will set and overwrite values from the default values
+    // of the class, Lease
   
   public String setTennantFirstName(String firstName){
     tenantfirstName = firstName;
@@ -99,8 +98,6 @@ public class Lease {
     return leaseTerm;
   }
 
-
-  // WORK HERE -----------------------------------
   public double setMonthlyRent(double monthlyRentCost){
     monthlyRent = monthlyRentCost;
     return monthlyRent;
@@ -108,8 +105,18 @@ public class Lease {
 
 
 
-
-
+  // NOTE: Need to edit method
+  // Method is not reading boolean value false and executes true
+  
+  public double setTotalCosts(boolean ownerHavePet){
+    if (ownerHavePet = true){
+      totalCost = monthlyRent + 10.00;
+    }
+    else if (ownerHavePet = false){
+      totalCost = monthlyRent;
+    }
+    return totalCost;
+  }
 
 
 
