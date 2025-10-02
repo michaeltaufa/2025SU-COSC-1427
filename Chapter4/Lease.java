@@ -8,9 +8,9 @@ name, apartment number, monthly rent amount, and term of the lease in months. - 
 Include a default constructor that initializes the name to XXX, the apartment 
 number to 0, the rent to 1000, and the term to 12. - COMPLETE
 
-Also include methods to get and set each of the fields.
+Also include methods to get and set each of the fields. - COMPLETE
 
-Include a nonstatic method named addPetFee() that adds $10 to the monthly 
+Include a nonstatic method named addPetFee() that adds $10 to the monthly - COMPLETE
 rent value and calls a static method named explainPetPolicy() that 
 explains the pet fee. - COMPLETE
 
@@ -103,16 +103,13 @@ public class Lease {
     return monthlyRent;
   }
 
-
-
-  // NOTE: Need to edit method
-  // Method is not reading boolean value false and executes true
-  
   public double setTotalCosts(boolean ownerHavePet){
-    if (ownerHavePet = true){
+
+    if (ownerHavePet == true){
       totalCost = monthlyRent + 10.00;
+      displayPetPolicy();
     }
-    else if (ownerHavePet = false){
+    else if (ownerHavePet == false){
       totalCost = monthlyRent;
     }
     return totalCost;
