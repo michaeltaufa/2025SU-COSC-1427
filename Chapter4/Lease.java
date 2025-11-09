@@ -107,7 +107,6 @@ public class Lease {
 
     if (ownerHavePet == true){
       totalCost = monthlyRent + 10.00;
-      displayPetPolicy();
     }
     else if (ownerHavePet == false){
       totalCost = monthlyRent;

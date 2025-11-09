@@ -27,6 +27,7 @@ public class LeaseTest {
     Scanner userInput = new Scanner(System.in);
     Lease testLease = new Lease("Michael", "Smith", 1000, 500.00, 5);
 
+    Lease lease1 = new Lease(tenantfirstName, tenantLastName, apartmentNumber, monthlyRent, leaseTerm);
 
     System.out.println("Welcome to the 'LeaseTest' program.");
 
@@ -68,7 +69,6 @@ public class LeaseTest {
       havePet = false;
       testLease.setTotalCosts(havePet);
     }
-
 
 
     System.out.println("\nResults:");
