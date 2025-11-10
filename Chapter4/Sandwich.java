@@ -31,15 +31,19 @@ public class Sandwich {
 
   // Methods:
   public void displayMainIngredient(){
-    System.out.println("The main ingredient of this sandwich is " + mainIngedient);
+    System.out.println("The main ingredient of this sandwich is " + mainIngedient + ".");
   }
 
   public void displayBreadType(){
-      System.out.println("The bread type of this sandwich is " + breadType);
+      System.out.println("The bread type of this sandwich is " + breadType + ".");
   }
 
   public void displaySandwichPrice(){
-    System.out.println("The total price of this sandwich is $" + sandwichPrice);
+    System.out.println("The total price of this sandwich is $" + sandwichPrice + ".");
+  }
+
+  public void displaySandwichDescription(){
+    System.out.println(mainIngedient + " sandwich ingredients: " + mainIngedient + " and " + breadType + "\nPrice: $" + sandwichPrice);
   }
 
   public static void main(String[] args) {
